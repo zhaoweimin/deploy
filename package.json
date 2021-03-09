@@ -1,0 +1,29 @@
+{
+  "name": "z-deploy-cli",
+  "version": "0.0.5",
+  "description": "前端自动部署cli",
+  "bin": {
+    "deploy": "./bin/deploy-cli.js"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zwm",
+  "license": "ISC",
+  "devDependencies": {
+  },
+  "dependencies": {
+    "commander": "^7.1.0",
+    "chalk": "^4.1.0",
+    "compressing": "^1.5.1",
+    "inquirer": "^8.0.0",
+    "node-ssh": "^11.1.1",
+    "ora": "^5.3.0",
+    "semver": "^7.3.4",
+    "shelljs": "^0.8.4"
+  },
+  "keywords": ["deploy", "deplop-cli"]
+}
