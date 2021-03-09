@@ -4,9 +4,9 @@
 const packageJson = require('../package.json');
 const fs = require('fs')
 // const path = require('path')
-const { checkDeployConfig, underlineLog, errorLog } = require('../utils/index');
+const { checkDeployConfig, underlineLog, infoLog } = require('../utils/index');
 const deploy = require('../lib/deploy');
-const { argv0 } = require('process');
+const deployInit = require('../lib/init');
 
 const deployPath = process.cwd()
 const deployConfigPath = `${deployPath}/deploy.config.js`;
@@ -19,7 +19,10 @@ function  run(argv) {
     console.log(`  version is ${version}`);
   } else if (argv[0] === '-h' || argv[0] === '--help') {
     console.log('  usage:\n');
-    console.log('  -v --version [show version]');
+    console.log('  -v --version [show version]\n');
+    console.log('  init  生成配置文件deploy.config.js');
+  } else if (argv[0] === 'init') {
+    deployInit(deployConfigPath)
   } else {
     // 判断配置文件是否存在
     if (fs.existsSync(deployConfigPath)) {

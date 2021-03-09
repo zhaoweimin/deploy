@@ -1,9 +1,9 @@
 {
   "name": "z-deploy-cli",
-  "version": "0.0.5",
+  "version": "1.0.1",
   "description": "前端自动部署cli",
   "bin": {
-    "deploy": "./bin/deploy-cli.js"
+    "deploy": "./bin/cli.js"
   },
   "directories": {
     "lib": "lib"

@@ -10,6 +10,7 @@ npm i z-deploy-cli -g
 ```
 deploy -h  // 查看指令
 deploy -v  // 查看版本
+deploy init // 生成配置文件
 ```
 
 ## 部署前配置文件
@@ -25,7 +26,7 @@ module.exports = Object.freeze({
     username: 'root', // 登录服务器用户名
     password: '123456', // 登录服务器密码
     distPath: 'dist',  // 本地打包dist目录
-    webDir: '/opt/html',  // // 测试环境服务器地址
+    webDir: '/opt/html',  // // 测试环境web目录 
   },
   prod: {  // 线上环境
     name: '线上环境',
@@ -46,3 +47,7 @@ deploy [env]  // 部署到不同环境
 deploy dev    // 部署到测试环境
 deploy prod   // 部署到生产环境
 ```
+
+## 注意事项
+打包到服务器的是文件夹，所以最后部署完成的时候
+`webDir`会跟`distPath`的文件夹
