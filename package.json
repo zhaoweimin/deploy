@@ -1,7 +1,7 @@
 {
   "name": "z-deploy-cli",
-  "version": "1.0.1",
-  "description": "前端自动部署cli",
+  "version": "1.0.2",
+  "description": "前端自动部署cli,执行deploy命令，自动打包前端项目，并部署到服务器上。",
   "bin": {
     "deploy": "./bin/cli.js"
   },
